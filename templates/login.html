@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
     <div class="logo">
@@ -25,15 +25,33 @@
         <div><a href="{% url 'login' %}">Login/Signup</a></div>
     </div>
     <hr>
-    <div class="reg">
-        <h1>LOGIN</h1>
-        <form class="login" action="" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter you email" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            <button type="button" class="btn btn-dark">Button</button>
-        </form>
+    <div class="ls">
+    <div class="cont">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+
+                <div class="forgot-pass">
+                    <a href="#">Forgot your password?</a>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+
+                <div class="signup-link">
+                    <a href="register.html">Signup</a>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 </body>
 </html>
