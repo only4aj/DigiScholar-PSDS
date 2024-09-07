@@ -4,49 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        .logo{
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        .l1{
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
-        }
-        .l2{
-            display:flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-        .container{
-            margin-top: 10px;
-            display: flex;
-            justify-content: end;
-            gap: 20px;
-        }
-        
-        .lg{
-            height: 50px;
-            width: 60px;
-        }
-        .contact{
-            background-color: black;
-            color: white;
-            padding: 10px;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
     <div class="logo">
         <div class="l1">        
-            <img class="lg" src="../static/Images/Home__1_-removebg-preview.png">
+            <img class="lg" src="{% static 'images/i1.png' %}">
             <div>Prime Minister's Special Scholarship Scheme </div>
         </div>
         <div class="l2">
-            <img class="lg" width="75px" src="../static/Images/logo-removebg-preview.png">
+            <img class="lg" width="75px" src="{% static 'images/i2.png' %}">
             <div class="name">All India Counil for Technical Education</div>
         </div>
     </div>
@@ -57,10 +25,10 @@
         <div><a href="login.html">Login/Signup</a></div>
     </div>
     <hr>
-    <img height="350px" width="80%" margin-left:20px src="../static/Images/Home.jpg">
+    <img height="350px" width="80%" margin-left:20px src="{% static "images/Home.jpg" %}">
     <div id="about">
         <h1 style="text-align: center;">About PMSSS</h1>
-        <p>The Prime Minister's Special Scholarship Scheme (PMSSS) is a flagship initiative by the Government of India aimed at empowering the youth of Jammu & Kashmir and Ladakh by providing financial assistance for higher education. Launched to promote peace and development in the region, PMSSS enables deserving students to pursue undergraduate degrees in recognized institutions across India.The scheme covers tuition fees, maintenance, and other allowances for courses in engineering, medical, and general education, ensuring that talented students from these regions have access to quality education and greater opportunities. With a vision to foster growth and stability through education, PMSSS serves as a beacon of hope for the students aspiring to shape a better future for themselves and their communities.</p>
+        <p>The Prime Minister's Special Scholarship Scheme (PMSSS) is a flagship initiative by the Government of India aimed at empowering the youth of Jammu & Kashmir and Ladakh by providing financial assistance for higher education. Launched to promote peace and development in the region, PMSSS enables deserving students to pursue undergraduate degrees in recognized institutions across India.The scheme covers tuition fees, maintenance, and other allowances for courses in engineering, medical, and general education, ensuring that talented students from these regions have access to quality education and greater opportunities. With a vision to foster growth and stability through education, PMSSS serves as a beacon of hope for the students aspiring to shape a better future for themselves and their communities.</p>
     </div>
     
     <div>

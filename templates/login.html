@@ -2,37 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div class="container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <label>Email</label>
-                    <input type="email" required>
-                </div>
-                
-                <div class="input-box">
-                    <label>Password</label>
-                    <input type="password" required>
-                </div>
-
-                <div class="forgot-pass">
-                    <a href="#">Forgot your password?</a>
-                </div>
-                
-                <button type="submit" class="btn">Login</button>
-
-                <div class="signup-link">
-                    <a href="signup.html">Signup</a>
-                </div>
-            </form>
+    <div class="logo">
+        <div class="l1">        
+            <img class="lg" src="{% static 'images/i1.png' %}">
+            <div>Prime Minister's Special Scholarship Scheme </div>
         </div>
+        <div class="l2">
+            <img class="lg" width="75px" src="{% static 'images/i2.png' %}">
+            <div class="name">All India Counil for Technical Education</div>
+        </div>
+    </div>
+    <div class="container">
+        <div><a href="index.html">Home</a></div>
+        <div><a href="#about">About</a></div>
+        <div><a href="scholarship.html">Scholarship</a></div>
+        <div><a href="login.html">Login/Signup</a></div>
+    </div>
+    <hr>
+    <div class="reg">
+        <h1>LOGIN</h1>
+        <form class="login" action="" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter you email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="button" class="btn btn-dark">Button</button>
+        </form>
     </div>
 </body>
 </html>
