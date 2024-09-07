@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
     <div class="logo">
@@ -19,10 +19,10 @@
         </div>
     </div>
     <div class="container">
-        <div><a href="index.html">Home</a></div>
+        <div><a href="{% url 'home' %}">Home</a></div>
         <div><a href="#about">About</a></div>
-        <div><a href="scholarship.html">Scholarship</a></div>
-        <div><a href="login.html">Login/Signup</a></div>
+        <div><a href="{% url 'scholarship' %}">Scholarship</a></div>
+        <div><a href="{% url 'login' %}">Login/Signup</a></div>
     </div>
     <hr>
 </body>

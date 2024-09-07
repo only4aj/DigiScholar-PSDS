@@ -4,15 +4,18 @@ import os
 # Create your views here.
 
 
-def index(request):
+def home(request):
     # Password Load from .env file
-    load_dotenv()
-    return render(request , "index.html",{"key":os.environ.get("PASSWORD")})
+    # load_dotenv()
+    return render(request , "home.html" )#,{"key":os.environ.get("PASSWORD")})
     # pass
 
 
 def login(request):
-    pass
+    return render(request , "login.html")
+
+def scholarship(request):
+    return render(request , "scholarship.html")
 
 def sag_bureau(request):
     pass

@@ -2,5 +2,7 @@ from django.urls import path
 from PSDS import views
 
 urlpatterns = [
-    path('' , views.index , name = 'index')
+    path('' , views.home , name = 'home'),
+    path('scholarship/' , views.scholarship , name = 'scholarship'),
+    path('login/' , views.login , name = 'login')
 ]
