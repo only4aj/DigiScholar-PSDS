@@ -17,6 +17,12 @@ def login(request):
 def scholarship(request):
     return render(request , "scholarship.html")
 
+def scholarship_form(request):
+    return render(request , "scholarship_form.html")
+
+def docs_upload(request):
+    return render(request , "docsupload.html")
+
 def sag_bureau(request):
     pass
 

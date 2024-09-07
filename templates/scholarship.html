@@ -120,7 +120,10 @@
             <li>Affidavit(Stating that the student is not availing any other scholarship or financial assistance from any other government or no-government source.)</li>
         </ul>
         <br>
-        <button type="submit" class="btn">Apply</button>
+        <form method="post" action="{% url 'scholarship_form' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn">Apply</button>
+        </form>
     </div>
 </body>
 </html>
