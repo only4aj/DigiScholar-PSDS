@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" IE=edge>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Application</title>
+    <link rel="stylesheet" href="scholarship_form_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Scholarship Application Form</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                
+                <!-- Applicant Information -->
+                <div class="section">
+                    <h3>Applicant Information</h3>
+                    <div class="input-box">
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Date of Birth</label>
+                        <input type="date" name="dob" required>
+                    </div>
+                </div>
+
+                <!-- Scholarship Usage Information -->
+                <div class="section">
+                    <h3>Scholarship Usage Information</h3>
+                    <div class="input-box">
+                        <label>Purpose of Scholarship</label>
+                        <textarea name="purpose" rows="4" placeholder="Explain how you will use the scholarship" required></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label>Institution Name</label>
+                        <input type="text" name="institution" placeholder="Enter your institution name" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Course Name</label>
+                        <input type="text" name="course" placeholder="Enter the course you are applying for" required>
+                    </div>
+                </div>
+
+                <!-- Upload Documents -->
+                <div class="section">
+                    <h3>Upload Required Documents</h3>
+                    <div class="input-box">
+                        <label>Upload ID Proof (PDF)</label>
+                        <input type="file" name="id_proof" accept=".pdf" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Upload Transcript (PDF)</label>
+                        <input type="file" name="transcript" accept=".pdf" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Upload Recommendation Letter (PDF)</label>
+                        <input type="file" name="recommendation" accept=".pdf" required>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
