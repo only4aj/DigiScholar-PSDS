@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+            padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.left-part,
+.right-part {
+    flex-basis: 40%;
+    
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+.left-part {
+    align-self: flex-start;
+}
+
+.right-part {
+    align-self: flex-start;
+}
+
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    font-weight: bold;
+}
+
+.input-box input[type="file"],
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    margin: 20px auto;
+    display: block;
+    margin-left: 40%;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
