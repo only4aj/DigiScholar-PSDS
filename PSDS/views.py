@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from dotenv import load_dotenv
+from django.conf import settings
 import os
+import rsa
 # Create your views here.
 
 
 def home(request):
-    # Password Load from .env file
-    # load_dotenv()
+    load_dotenv()
+    PKey = getattr(settings,"PUBLICKEY")
+    data = rsa.encryptionData(PKey,os.environ.get("PKEY"),"This is Home Directory")
+    
     return render(request , "home.html" )#,{"key":os.environ.get("PASSWORD")})
     # pass
 
