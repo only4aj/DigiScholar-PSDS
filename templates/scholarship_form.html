@@ -5,71 +5,121 @@
     <meta http-equiv="X-UA-Compatible" IE=edge>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarship Application</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/scholarship_form_style.css' %}">
+    <link rel="stylesheet" href="main_style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container3">
+        <h2>Scholarship Application Form</h2>
         <div class="form-box">
-            <h2>Scholarship Application Form</h2>
-            <form action="{% url 'docs_upload' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
+            <form action="#" method="post" enctype="multipart/form-data">
                 
                 <!-- Applicant personal Information -->
+            
                 <div class="section">
-                    <h3>Applicant personal Information</h3>
-                    <div class="input-box">
-                        <label>Full Name <span class="required">*</span></label>
-                        <input type="text" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Father's Name <span class="required">*</span></label>
-                        <input type="text" name="name" placeholder="Enter your father's name as per 12th marksheet" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Mother's Name <span class="required">*</span></label>
-                        <input type="text" name="name" placeholder="Enter your mother's name as per 12th marksheet" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Gender</label>
-                        <input type="text" name="gender" placeholder="Enter your gender" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Phone Number <span class="required">*</span></label>
-                        <input type="text" name="phone" placeholder="Enter your phone number" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Date of Birth <span class="required">*</span></label>
-                        <input type="date" name="dob" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Nationality <span class="required">*</span></label>
-                        <input type="text" name="nationality" placeholder="Enter your nationality" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Permanent Address <span class="required">*</span></label>
-                        <input type="text" name="Permanent Address" placeholder="Enter your Permanent Address" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Purpose of Scholarship <span class="required">*</span></label>
-                        <textarea name="purpose" rows="4" placeholder="Explain how you will use the scholarship" required></textarea>
-                    </div>
-                    <div class="input-box">
-                        <label>Institution Name <span class="required">*</span></label>
-                        <input type="text" name="institution" placeholder="Enter your institution name" required>
-                    </div>
-                    <div class="input-box">
-                        <label>Course Name <span class="required">*</span></label>
-                        <input type="text" name="course" placeholder="Enter the course you are applying for" required>
-                    </div>
+                    <h3>Applicant Personal Information</h3>
                 </div>
+            <div class="part1">
+                <div class="left-column input-box">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Father's Name <span class="required">*</span></label>
+                    <input type="text" name="father_name" placeholder="Enter your father's name as per 12th marksheet" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Mother's Name <span class="required">*</span></label>
+                    <input type="text" name="mother_name" placeholder="Enter your mother's name as per 12th marksheet" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Gender</label>
+                    <input type="text" name="gender" placeholder="Enter your gender" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Phone Number <span class="required">*</span></label>
+                    <input type="text" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Date of Birth <span class="required">*</span></label>
+                    <input type="date" name="dob" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Nationality <span class="required">*</span></label>
+                    <input type="text" name="nationality" placeholder="Enter your nationality" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Permanent Address <span class="required">*</span></label>
+                    <input type="text" name="permanent_address" placeholder="Enter your permanent address" required>
+                </div>
+                <div class="left-column input-box">
+                    <label>Purpose of Scholarship <span class="required">*</span></label>
+                    <textarea name="purpose" rows="4" placeholder="Explain how you will use the scholarship" required></textarea>
+                </div>
+            </div>    
+                
+                 <!-- Additional Information -->
+            
+                 <div class="section">
+                    <h3>Educational Information</h3>
+                </div>
+            <div class = "part2">    
+                <div class="center-column input-box">
+                    <label>Institution Name <span class="required">*</span></label>
+                    <input type="text" name="institution" placeholder="Enter your institution name" required>
+                </div>
+                <div class="center-column input-box">
+                    <label>Course Name <span class="required">*</span></label>
+                    <input type="text" name="course" placeholder="Enter the course you are applying for" required>
+                </div>
+                <div class="center-column input-box">
+                    <label>Current Year <span class="required">*</span></label>
+                    <input type="text" name="current_year" placeholder="Enter your current year" required>
+                </div>
+                <div class="center-column input-box">
+                    <label>Type of Course <span class="required">*</span></label>
+                    <select name="course_type" required>
+                        <option value="">Select Course Type</option>
+                        <option value="ug">Undergraduate (UG)</option>
+                        <option value="pg">Postgraduate (PG)</option>
+                        <option value="online">Online Course</option>
+                    </select>
+                </div>
+            </div>   
 
-                <!-- next -->
-                <button type="submit" class="btn">next</button>
+                <!-- Educational Information -->
+               
+                <div class="section">
+                    <h3>Additional Information</h3>
+                </div>
+            <div class="part3">     
+                <div class="right-column input-box">
+                    <label>10th Marks <span class="required">*</span></label>
+                    <input type="text" name="tenth_marks" placeholder="Enter your 10th marks" required>
+                </div>
+                <div class="right-column input-box">
+                    <label>10th Percentage <span class="required">*</span></label>
+                    <input type="text" name="tenth_percentage" placeholder="Enter your 10th percentage" required>
+                </div>
+                <div class="right-column input-box">
+                    <label>12th Marks <span class="required">*</span></label>
+                    <input type="text" name="twelfth_marks" placeholder="Enter your 12th marks" required>
+                </div>
+                <div class="right-column input-box">
+                    <label>12th Percentage <span class="required">*</span></label>
+                    <input type="text" name="twelfth_percentage" placeholder="Enter your 12th percentage" required>
+                </div>
+            </div>
+               
+                
+
+                <!-- Next button centered -->
+                <div class="next-button">
+                    <button type="submit" class="btn">Next</button>
+                </div>
             </form>
         </div>
     </div>
