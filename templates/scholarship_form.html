@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" IE=edge>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarship Application</title>
-    <link rel="stylesheet" href="main_style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/scholarship_form_style.css' %}">
 </head>
 <body>
     <div class="container3">
         <h2>Scholarship Application Form</h2>
-        <div class="form-box">
+        
             <form action="#" method="post" enctype="multipart/form-data">
-                
+                <div class="form-box">        
                 <!-- Applicant personal Information -->
             
                 <div class="section">
                     <h3>Applicant Personal Information</h3>
-                </div>
+                
             <div class="part1">
                 <div class="left-column input-box">
                     <label>Full Name <span class="required">*</span></label>
@@ -60,12 +61,12 @@
                     <textarea name="purpose" rows="4" placeholder="Explain how you will use the scholarship" required></textarea>
                 </div>
             </div>    
-                
+        </div>
                  <!-- Additional Information -->
             
                  <div class="section">
                     <h3>Educational Information</h3>
-                </div>
+                
             <div class = "part2">    
                 <div class="center-column input-box">
                     <label>Institution Name <span class="required">*</span></label>
@@ -89,12 +90,12 @@
                     </select>
                 </div>
             </div>   
-
+        </div>
                 <!-- Educational Information -->
                
                 <div class="section">
                     <h3>Additional Information</h3>
-                </div>
+                
             <div class="part3">     
                 <div class="right-column input-box">
                     <label>10th Marks <span class="required">*</span></label>
@@ -113,7 +114,7 @@
                     <input type="text" name="twelfth_percentage" placeholder="Enter your 12th percentage" required>
                 </div>
             </div>
-               
+        </div>
                 
 
                 <!-- Next button centered -->
