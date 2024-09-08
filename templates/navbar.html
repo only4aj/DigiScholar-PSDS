@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    
+    <div class="logo">
+        <div class="l1">        
+            <img class="lg" src="{% static 'images/i1.png' %}">
+            <div>Prime Minister's Special Scholarship Scheme </div>
+        </div>
+        <div class="l2">
+            <img class="lg" width="75px" src="{% static 'images/i2.png' %}">
+            <div class="name">All India Counil for Technical Education</div>
+        </div>
+    </div>
+    <div class="container">
+        <div><a href="{% url 'home' %}">Home</a></div>
+        <div><a href="#about">About</a></div>
+        <div><a href="{% url 'scholarship' %}">Scholarship</a></div>
+        <div><a href="{% url 'login' %}">Login/Signup</a></div>
+    </div>
+</body>
+</html>

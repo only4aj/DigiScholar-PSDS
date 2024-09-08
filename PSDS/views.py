@@ -5,7 +5,6 @@ import os
 import rsa
 # Create your views here.
 
-
 def home(request):
     load_dotenv()
     PKey = getattr(settings,"PUBLICKEY")
