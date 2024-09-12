@@ -20,10 +20,7 @@
             {% csrf_token %}
             <div class="form-box">
                 <!-- Applicant personal Information -->
-
                 <div class="formPart d-flex flex-column my-3 py-2">
-
-
                     <div class="section">
                         <div class="sectionHead text-start my-3">
                             <h3>Applicant Personal Information</h3>
@@ -47,8 +44,12 @@
                             </div>
                             <div class="left-column input-box">
                                 <label>Gender</label>
-                                <input class="form-control" type="text" name="gender" placeholder="Enter your gender"
-                                    required>
+                                <select name="gender" id="gender" class="form-control" required>
+                                    <option value="" selected>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                             <div class="left-column input-box">
                                 <label>Email</label>
@@ -57,7 +58,7 @@
                             </div>
                             <div class="left-column input-box">
                                 <label>Phone Number <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="phone"
+                                <input class="form-control" type="number" name="phone"
                                     placeholder="Enter your phone number" required>
                             </div>
                             <div class="left-column input-box">
@@ -73,11 +74,6 @@
                                 <label>Permanent Address <span class="required">*</span></label>
                                 <input class="form-control" type="text" name="permanent_address"
                                     placeholder="Enter your permanent address" required>
-                            </div>
-                            <div class="left-column input-box">
-                                <label>Purpose of Scholarship <span class="required">*</span></label>
-                                <textarea name="purpose" rows="4" placeholder="Explain how you will use the scholarship"
-                                    required></textarea>
                             </div>
                         </div>
                     </div>
@@ -101,7 +97,7 @@
                             </div>
                             <div class="center-column input-box">
                                 <label>Current Year <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="current_year"
+                                <input class="form-control" type="number" name="current_year"
                                     placeholder="Enter your current year" required>
                             </div>
                             <div class="center-column input-box">
@@ -157,7 +153,7 @@
                                 </div>
                                 <div class="center-column input-box">
                                     <label>IFSC Code of Bank <span class="required">*</span></label>
-                                    <input class="form-control" type="number" name="ifsc_number"
+                                    <input class="form-control" type="text" name="ifsc_number"
                                         placeholder="Enter ifsc code of bank" required>
                                 </div>
                             </div>
