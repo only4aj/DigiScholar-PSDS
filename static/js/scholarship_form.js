@@ -1,8 +1,8 @@
 
 const btnHide = (check) => {
     check ?
-        document.querySelector("#next-btn").innerHTML = "" :
-        document.querySelector("#next-btn").innerHTML = `<button type="submit" class="btn btn-primary">Next</button>`;
+        document.querySelector("#next-btn").classList.remove("disabled"):
+        document.querySelector("#next-btn").classList.add("disabled");
 }
 const checkPhone = () => {
     let value = document.querySelector("#phone").value;

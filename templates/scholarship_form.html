@@ -105,7 +105,7 @@
                             </div>
                             <div class="center-column input-box">
                                 <label title="It is compulsory">Current Year <span class="required">*</span></label>
-                                <input class="form-control" type="number" name="current_year"
+                                <input class="form-control" type="number" maxlength="4" name="current_year" oninput="javascript: if(this.value.length > this.maxLentgh) this.value = this.value.slice(0,this.maxLength)"
                                     placeholder="Enter your current year" onkeyup="checkFillForm()" required>
                             </div>
                             <div class="center-column input-box">
@@ -188,7 +188,7 @@
                 </div>
                 <!-- Next button centered -->
                 <div class="next-button" id="next-btn">
-                    <!-- <button type="submit" class="btn btn-primary">Next</button> -->
+                    <button type="submit" class="btn btn-primary disabled">Next</button>
                 </div>
         </form>
     </div>
