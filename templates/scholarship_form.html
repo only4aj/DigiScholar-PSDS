@@ -29,24 +29,23 @@
                         <div class="part part1">
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Full Name <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="name" placeholder="Enter your full name"
-                                    onkeyup="checkFillForm()" required>
+                                <input class="form-control personal" type="text" name="name" id="name" maxlength="30" placeholder="Enter your full name" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Father's Name <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="father_name"
+                                <input class="form-control personal" type="text" name="father_name" maxlength="30"
                                     placeholder="Enter your father's name as per 12th marksheet"
-                                    onkeyup="checkFillForm()" required>
+                                    onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Mother's Name <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="mother_name"
+                                <input class="form-control personal" type="text" name="mother_name" maxlength="30"
                                     placeholder="Enter your mother's name as per 12th marksheet"
-                                    onkeyup="checkFillForm()" required>
+                                    onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Gender <span class="required">*</span></label>
-                                <select name="gender" id="gender" class="form-control" onkeyup="checkFillForm()"
+                                <select name="gender" id="gender" class="form-control personal" onkeyup="checkFillForm(),checker()"
                                     required>
                                     <option value="" selected>Select gender</option>
                                     <option value="male">Male</option>
@@ -56,31 +55,32 @@
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Email <span class="required">*</span></label>
-                                <input class="form-control" type="email" name="email" placeholder="Enter your email"
-                                    onkeyup="checkFillForm()" required>
+                                <input class="form-control personal" type="email" name="email" placeholder="Enter your email"
+                                    onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Phone Number <span class="required">*</span> <span
                                         class="text-start warning" id="warning1"></span></label>
-                                <input class="form-control" type="number" name="phone"
-                                    placeholder="Enter your phone number" id="phone" onkeyup="checkPhone()"
-                                    onkeyup="checkFillForm()" required>
+                                <input class="form-control personal" type="number" name="phone" maxlength="12"
+                                    placeholder="Enter your phone number with (91)"
+                                    oninput="javascript:if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength);"
+                                    id="phone" onkeyup="checkFillForm(),checker()" required>
 
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Date of Birth <span class="required">*</span></label>
-                                <input class="form-control" type="date" name="dob" onkeyup="checkFillForm()" required>
+                                <input class="form-control personal" type="date" id="date" name="dob" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Nationality <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="nationality"
-                                    placeholder="Enter your nationality" onkeyup="checkFillForm()" required>
+                                <input class="form-control personal" type="text" name="nationality"
+                                    placeholder="Enter your nationality" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Permanent Address <span
                                         class="required">*</span></label>
-                                <input class="form-control" type="text" name="permanent_address"
-                                    placeholder="Enter your permanent address" onkeyup="checkFillForm()" required>
+                                <input class="form-control personal" type="text" name="permanent_address"
+                                    placeholder="Enter your permanent address" onkeyup="checkFillForm(),checker()" required>
                             </div>
                         </div>
                     </div>
@@ -94,23 +94,24 @@
                         <div class="part part2">
                             <div class="center-column input-box">
                                 <label title="It is compulsory">Institution Name <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="institution"
-                                    placeholder="Enter your institution name" onkeyup="checkFillForm()" required>
+                                <input class="form-control education" type="text" name="institution"
+                                    placeholder="Enter your institution name" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="center-column input-box">
                                 <label title="It is compulsory">Course Name <span class="required">*</span></label>
-                                <input class="form-control" type="text" name="course"
-                                    placeholder="Enter the course you are applying for" onkeyup="checkFillForm()"
+                                <input class="form-control education" type="text" name="course"
+                                    placeholder="Enter the course you are applying for" onkeyup="checkFillForm(),checker()"
                                     required>
                             </div>
                             <div class="center-column input-box">
                                 <label title="It is compulsory">Current Year <span class="required">*</span></label>
-                                <input class="form-control" type="number" maxlength="4" name="current_year" oninput="javascript: if(this.value.length > this.maxLentgh) this.value = this.value.slice(0,this.maxLength)"
-                                    placeholder="Enter your current year" onkeyup="checkFillForm()" required>
+                                <input class="form-control education" type="number" maxlength="1" name="current_year"
+                                    oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)"
+                                    placeholder="Enter your current year" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="center-column input-box">
                                 <label title="It is compulsory">Type of Course <span class="required">*</span></label>
-                                <select name="course_type" class="form-control" onkeyup="checkFillForm()" required>
+                                <select name="course_type" class="form-control education" onkeyup="checkFillForm(),checker()" required>
                                     <option value="">Select Course Type</option>
                                     <option value="ug">Undergraduate (UG)</option>
                                     <option value="pg">Postgraduate (PG)</option>
@@ -119,34 +120,34 @@
                             </div>
                             <div class="right-column input-box">
                                 <label title="It is compulsory">10th Marks <span class="required">*</span></label>
-                                <input class="form-control" type="number" name="tenth_marks"
+                                <input class="form-control education" type="number" name="tenth_marks"
                                     placeholder="Enter your 10th marks"
                                     oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength);"
-                                    maxlength="3" onkeyup="checkFillForm()" required>
+                                    maxlength="3" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="right-column input-box">
                                 <label title="It is compulsory">10th Percentage(%) <span class="required">*</span> <span
                                         class="text-start warning" id="warning4"></span></label>
-                                <input class="form-control" type="number" name="tenth_percentage"
+                                <input class="form-control education" type="number" name="tenth_percentage"
                                     placeholder="Enter your 10th percentage"
                                     oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength);"
-                                    maxlength="3" onkeyup="checkFillForm(),checkPercentage('10percentage','warning4')"
+                                    maxlength="3" onkeyup="checkFillForm(),checker()"
                                     id="10percentage" required>
                             </div>
                             <div class="right-column input-box">
                                 <label title="It is compulsory">12th Marks <span class="required">*</span></label>
-                                <input class="form-control" type="number" name="twelth_marks"
+                                <input class="form-control education" type="number" name="twelth_marks"
                                     placeholder="Enter your 12th marks"
                                     oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength);"
-                                    maxlength="3" onkeyup="checkFillForm()" required>
+                                    maxlength="3" onkeyup="checkFillForm(),checker()" required>
                             </div>
                             <div class="right-column input-box">
                                 <label title="It is compulsory">12th Percentage(%) <span class="required">*</span> <span
                                         class="text-start warning" id="warning5"></span></label>
-                                <input class="form-control" type="number" name="twelth_percentage"
+                                <input class="form-control education" type="number" name="twelth_percentage"
                                     placeholder="Enter your 12th percentage" maxlength="3"
                                     oninput="javascript:if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)"
-                                    onkeyup="checkFillForm(),checkPercentage('12percentage','warning5')"
+                                    onkeyup="checkFillForm(),checker()"
                                     id="12percentage" required>
                             </div>
                         </div>
@@ -158,29 +159,29 @@
                             <div class="part part3">
                                 <div class="center-column input-box">
                                     <label title="It is compulsory">Bank Name <span class="required">*</span></label>
-                                    <input class="form-control" type="text" name="bank_name"
-                                        placeholder="Enter Bank name" onkeyup="checkFillForm()" required>
+                                    <input class="form-control bank" type="text" name="bank_name"
+                                        placeholder="Enter Bank name" onkeyup="checkFillForm(),checker()" required>
                                 </div>
                                 <div class="center-column input-box">
                                     <label title="It is compulsory">Account Number <span class="required">*</span> <span
                                             class="text-start warning" id="warning2"></span></label>
-                                    <input class="form-control" type="number" name="account_number"
+                                    <input class="form-control bank" type="number" name="account_number"
                                         placeholder="Enter account number" id="account_number"
-                                        onkeyup="checkFillForm(),checkAccNo()" required>
+                                        onkeyup="checkFillForm(),checker()" required>
                                 </div>
                                 <div class="center-column input-box">
                                     <label title="It is compulsory">Confirm Account Number <span
                                             class="required">*</span> <span class="text-start warning"
                                             id="warning3"></span></label>
-                                    <input class="form-control" type="number" name="caccount_number"
+                                    <input class="form-control bank" type="number" name="caccount_number"
                                         placeholder="Enter confirm account number" id="caccount_number"
-                                        onkeyup="checkFillForm(),checkAccNo()" required>
+                                        onkeyup="checkFillForm(),checker()" required>
                                 </div>
                                 <div class="center-column input-box">
                                     <label title="It is compulsory">IFSC Code of Bank <span
                                             class="required">*</span></label>
-                                    <input class="form-control" type="text" name="ifsc_number"
-                                        placeholder="Enter ifsc code of bank" onkeyup="checkFillForm()" required>
+                                    <input class="form-control bank" type="text" name="ifsc_number"
+                                        placeholder="Enter ifsc code of bank" onkeyup="checkFillForm(),checker()" required>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +189,7 @@
                 </div>
                 <!-- Next button centered -->
                 <div class="next-button" id="next-btn">
-                    <button type="submit" class="btn btn-primary disabled" id="btn" >Next</button>
+                    <button type="submit" class="btn btn-primary" disabled id="btn">Next</button>
                 </div>
         </form>
     </div>
