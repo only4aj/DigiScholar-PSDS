@@ -120,7 +120,3 @@ def decryptionData(pvtKey, pkey, message):
     n = int.from_bytes(base64.b64decode(pkey), byteorder="big")
     decrypted_message = decry(d, n, message)
     return decrypted_message
-
-
-if __name__ == "__main__":
-    pass
