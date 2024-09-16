@@ -67,12 +67,6 @@ h2 {
     position: absolute;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 .section {
     text-align: center;
     background-color: #fff;

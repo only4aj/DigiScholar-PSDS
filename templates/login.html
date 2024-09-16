@@ -9,22 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <div class="logo">
-        <div class="l1">        
-            <img class="lg" src="{% static 'images/i1.png' %}">
-            <div>Prime Minister's Special Scholarship Scheme </div>
-        </div>
-        <div class="l2">
-            <img class="lg" width="75px" src="{% static 'images/i2.png' %}">
-            <div class="name">All India Counil for Technical Education</div>
-        </div>
-    </div>
-    <div class="container">
-        <div><a href="{% url 'home' %}">Home</a></div>
-        <div><a href="#about">About</a></div>
-        <div><a href="{% url 'scholarship' %}">Scholarship</a></div>
-        <div><a href="{% url 'login' %}">Login/Signup</a></div>
-    </div>
+    {% include 'navbar.html' %}
     <hr>
     <div class="ls">
     <div class="cont">
@@ -48,7 +33,7 @@
                 <button type="submit" class="btn">Login</button>
 
                 <div class="signup-link">
-                    <a href="register.html">Signup</a>
+                    <a href="{%url 'register' %}">Register</a>
                 </div>
             </form>
         </div>

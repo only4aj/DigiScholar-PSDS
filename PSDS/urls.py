@@ -6,5 +6,6 @@ urlpatterns = [
     path('scholarship/' , views.scholarship , name = 'scholarship'),
     path('applypmsss/' , views.scholarship_form , name = 'scholarship_form'),
     path('docsupload/' , views.docs_upload , name = 'docs_upload'),
-    path('login/' , views.login , name = 'login')
+    path('login/' , views.login , name = 'login'),
+    path('register/' , views.register , name = 'register'),
 ]

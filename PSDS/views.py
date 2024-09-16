@@ -101,7 +101,8 @@ def docs_upload(request):
     
     return render(request, "docsupload.html")
 
-
+def register(request):
+    return render(request,"register.html")
 def sag_bureau(request):
     pass
 

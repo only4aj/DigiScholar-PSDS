@@ -1,18 +1,4 @@
-.logo{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-.l1{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-}
-.l2{
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+
 .container{
     margin-top: 10px;
     display: flex;
@@ -20,10 +6,7 @@
     gap: 20px;
 }
 
-.lg{
-    height: 50px;
-    width: 60px;
-}
+
 .contact{
     background-color: black;
     color: white;
