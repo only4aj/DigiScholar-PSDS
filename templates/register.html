@@ -27,23 +27,24 @@
                     <div class="input-box mb-3">
                         <label>Enter Mobile Number</label>
                         <input  class="form-control" type="number" maxlength="12"
-                            oninput="javascript:if(this.value.maxLength > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
+                            oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
                             required>
-                    </div>
-                    <div class="input-box mb-3">
-                        <label>Enter Name</label>
-                        <input  class="form-control" type="name" required>
                     </div>
                     <div class="input-box mb-3">
                         <label>Email</label>
                         <input  class="form-control" type="email" required>
                     </div>
-
+                    
                     <div class="input-box mb-3">
                         <label>Password</label>
                         <input  class="form-control" type="password" required>
-
                     </div>
+                    <!-- <div class="input-box mb-3">
+                        <label>Enter OTP</label>
+                        <input  class="form-control" type="number" maxlength="6"
+                            oninput="javascript:if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
+                            required>
+                    </div> -->
                     <div
                         class="container lower-part d-flex flex-column justify-content-center align-items-center gap-3">
                         <button type="submit" class="btn btn-primary my-2 fs-5">Signup</button>
