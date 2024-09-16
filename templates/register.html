@@ -13,47 +13,42 @@
 
 <body>
     {% include 'navbar.html' %}
-    <div class="ls">
-        <div class="container d-flex justify-content-center align-items-center cont">
-            <div
-                class="container d-flex justify-content-center align-items-center gap-4 flex-column bg-primary-subtle rounded login-box">
-                <h2 class="container text-center text-primary py-3 my-2 fs-2 fw-bold d-inline-block">Signup</h2>
-                <form action="#"
-                    class="w-75 d-flex justify-content-start align-items-start gap-4 flex-wrap p-3 m-3 shadow rounded">
-                    <div class="input-box mb-3">
-                        <label>Enter Name</label>
-                        <input  class="form-control" type="name" required>
-                    </div>
-                    <div class="input-box mb-3">
-                        <label>Enter Mobile Number</label>
-                        <input  class="form-control" type="number" maxlength="12"
-                            oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
-                            required>
-                    </div>
-                    <div class="input-box mb-3">
-                        <label>Email</label>
-                        <input  class="form-control" type="email" required>
-                    </div>
-                    
-                    <div class="input-box mb-3">
-                        <label>Password</label>
-                        <input  class="form-control" type="password" required>
-                    </div>
-                    <!-- <div class="input-box mb-3">
+    <div class="d-flex justify-content-center align-items-center cont">
+        <div class="container d-flex justify-content-center align-items-center gap-4 flex-column rounded login-box">
+            <h2 class="container text-center text-primary py-3 my-2 fw-bold heading">Signup</h2>
+            <form action="#" class="w-75 d-flex justify-content-start align-items-start gap-4 flex-wrap p-2 m-2">
+                <div class="input-box mb-3">
+                    <label>Enter Name</label>
+                    <input class="form-control" type="name" required>
+                </div>
+                <div class="input-box mb-3">
+                    <label>Enter Mobile Number</label>
+                    <input class="form-control" type="number" maxlength="12"
+                        oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
+                        required>
+                </div>
+                <div class="input-box mb-3">
+                    <label>Email</label>
+                    <input class="form-control" type="email" required>
+                </div>
+
+                <div class="input-box mb-3">
+                    <label>Password</label>
+                    <input class="form-control" type="password" required>
+                </div>
+                <!-- <div class="input-box mb-3">
                         <label>Enter OTP</label>
                         <input  class="form-control" type="number" maxlength="6"
                             oninput="javascript:if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
                             required>
                     </div> -->
-                    <div
-                        class="container lower-part d-flex flex-column justify-content-center align-items-center gap-3">
-                        <button type="submit" class="btn btn-primary my-2 fs-5">Signup</button>
-                        <div class="signup-link">
-                            <a href="{%url 'login' %}">Login</a>
-                        </div>
+                <div class="container lower-part d-flex flex-column justify-content-center align-items-center gap-3">
+                    <button type="submit" class="btn btn-primary my-2 fs-5">Signup</button>
+                    <div class="signup-link">
+                        <a href="{%url 'login' %}">Login</a>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>
