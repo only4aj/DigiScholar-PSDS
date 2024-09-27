@@ -1,6 +1,5 @@
 import base64
 
-
 def mod_exp(base, exp, mod):
     result = 1
     base = base % mod

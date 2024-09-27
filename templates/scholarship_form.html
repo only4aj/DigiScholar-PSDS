@@ -46,7 +46,7 @@
                             </div>
                             <div class="left-column input-box">
                                 <label title="It is compulsory">Gender <span class="required">*</span></label>
-                                <select name="gender" id="gender" class="form-control personal" onkeyup="checkFillForm(),checker()"
+                                <select name="gender" id="gender" class="form-control personal" onchange="checkFillForm()" onkeyup="checkFillForm(),checker()"
                                     required>
                                     <option value="" selected>Select gender</option>
                                     <option value="male">Male</option>
@@ -112,7 +112,7 @@
                             </div>
                             <div class="center-column input-box">
                                 <label title="It is compulsory">Type of Course <span class="required">*</span></label>
-                                <select name="course_type" class="form-control education" onkeyup="checkFillForm(),checker()" required>
+                                <select name="course_type" class="form-control education" onchange="checkFillForm()" onkeyup="checkFillForm(),checker()" required>
                                     <option value="">Select Course Type</option>
                                     <option value="ug">Undergraduate (UG)</option>
                                     <option value="pg">Postgraduate (PG)</option>
