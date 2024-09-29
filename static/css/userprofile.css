@@ -51,3 +51,70 @@ body{
 .shadow-none {
     box-shadow: none!important;
 }
+
+.application-tracking {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px; /* Added padding to avoid circles being too close to the edges */
+}
+
+.status-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1; /* Equal width for each item */
+}
+
+.status-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #007bff; /* Default color */
+    background-color: #fff;
+    position: relative;
+    z-index: 1; /* To bring circles above the line */
+}
+
+.status-text {
+    font-weight: 600;
+    color: #1a202c;
+    margin-top: 5px;
+}
+
+.status-line {
+    position: absolute;
+    top: 12px; /* Center line vertically */
+    left: 0; /* Start from the left edge of the first circle */
+    width: calc(100% - 50px); /* Adjusted width to accommodate padding and circle size */
+    height: 4px;
+    background-color: #007bff; /* Default color */
+    z-index: 0; /* Behind the circles */
+}
+
+.status-item:not(:last-child) .status-line {
+    left: calc(100% + 12px); /* Adjusted to position the lines correctly */
+    width: 100%; /* Each line should stretch to the next circle */
+}
+
+.completed .status-circle {
+    background-color: #007bff; /* Completed color */
+    border-color: #007bff; /* Completed color */
+}
+
+.completed + .status-line {
+    background-color: #007bff; /* Completed line color */
+}
+.notifications-card {
+    padding: 20px; /* Increased padding for spaciousness */
+    border-radius: .5rem; /* Slightly larger corners */
+    background-color: #f8f9fa; /* Light background for visibility */
+}
+
+.notification-item {
+    margin-bottom: 15px; /* Space between notification items */
+    padding: 10px; /* Inner padding for each notification */
+    border: 1px solid #dee2e6; /* Border for clarity */
+    border-radius: .25rem; /* Rounded corners for notifications */
+}
