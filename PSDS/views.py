@@ -129,3 +129,7 @@ def sag_bureau(request):
 
 def finance_bureau(request):
     pass
+
+
+def student_profile(request):
+    return render(request , "userprofile.html")

@@ -8,4 +8,5 @@ urlpatterns = [
     path('docsupload/' , views.docs_upload , name = 'docs_upload'),
     path('login/' , views.login , name = 'login'),
     path('register/' , views.register , name = 'register'),
+    path('studentprofile/' , views.student_profile , name = 'studentprofile'),
 ]
