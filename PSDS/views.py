@@ -133,3 +133,6 @@ def finance_bureau(request):
 
 def student_profile(request):
     return render(request , "userprofile.html")
+
+def preview_page(request):
+    return render(request , "preview.html")

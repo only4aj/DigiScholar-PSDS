@@ -190,11 +190,12 @@
 
         <!-- Buttons for Submit or Go Back -->
         <div class="buttons">
-            <form action="{% url 'form_edit' %}" method="get">
+            <form action="#" method="get">
+                {% csrf_token %}
                 <button type="submit" class="btn btn-warning back-btn">Back</button>
             </form>
 
-            <form action="{% url 'form_submit' %}" method="post">
+            <form action="#" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-success submit-btn">Submit</button>
             </form>
