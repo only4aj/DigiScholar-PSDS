@@ -1,15 +1,48 @@
-
-.container{
+/* Existing styles */
+.container {
     margin-top: 10px;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: space-between; /* Space between the content and button */
+    min-height: 80vh; /* Ensure the container takes up most of the page height */
     gap: 20px;
+    padding-bottom: 50px; /* Space for button */
 }
 
-
-.contact{
+.contact {
     background-color: black;
-    color: white;
+    color: rgb(23, 25, 198);
     padding: 10px;
 }
 
+/* New styles for pop-out text effect */
+h2 {
+    color: blue;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Pop-out effect */
+}
+
+h4, p, li {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+}
+
+
+.btn {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    margin: auto; 
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    bottom: 0;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    transition: all 0.3s ease; 
+}

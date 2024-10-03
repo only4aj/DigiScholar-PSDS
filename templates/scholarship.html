@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,18 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <style>
-        h2 {
-            color: blue;
-        }
-    </style>
+
 </head>
 
 <body>
     {% include 'navbar.html' %}
     <hr>
-    <div class="container my-4 py-3">
-        <div class="info p-3 ">
+    <div class="container">
+        <div class="info p-3">
             <h2>Overview</h2>
             <p>
                 Launch in the year 2011, PMSSS is a scholarship scheme by the All India Council for Technical Education
@@ -31,7 +28,9 @@
                 passed the Class 12th examination from JKBOSE or CBSE-affiliated schools located in the UTs of J&K and
                 Ladakh. The family income of the applicant should not exceed ₹8,00,000 per annum. 5000 fresh
                 scholarships are available per annum. 2070 scholarships are for General Degree Courses, 2830 for
-                Professional/Engineering courses, and 100 for Medical Courses.</p>
+                Professional/Engineering courses, and 100 for Medical Courses.
+            </p>
+
             <br>
 
             <h2>Benefits</h2>
@@ -146,9 +145,12 @@
                     from any other government or no-government source.)</li>
             </ul>
             <br>
+
             <form method="post" action="{% url 'scholarship_form' %}">
                 {% csrf_token %}
-                <button type="submit" class="btn">Apply</button>
+                <div class="btn-container">
+                    <button type="submit" class="btn">Apply</button>
+                </div>
             </form>
         </div>
     </div>
