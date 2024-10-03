@@ -15,14 +15,14 @@
 
 <body>
     {% include 'navbar.html' %}
-    <div class="container container3 my-4 d-flex flex-column py-4">
-        <h2 class="bg-info-subtle text-dark rounded p-2 my-3">Scholarship Application Form</h2>
+    <div class="container container3 my-4   py-4">
+        <h2 class="bg-info-subtle text-dark  p-2 my-3">Scholarship Application Form</h2>
 
         <form action="{% url 'docs_upload' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-box">
                 <!-- Applicant personal Information -->
-                <div class="formPart d-flex flex-column my-3 py-2">
+                <div class="formPart   my-3 py-2">
                     <div class="section">
                         <div class="sectionHead text-start my-3">
                             <h3>Applicant Personal Information</h3>

@@ -13,10 +13,10 @@
 
 <body>
     {% include 'navbar.html' %}
-    <div class="d-flex justify-content-center align-items-center cont">
-        <div class="container d-flex justify-content-center align-items-center gap-4 flex-column rounded login-box">
-            <h2 class="container text-center text-primary py-3 my-2 fw-bold heading">Signup</h2>
-            <form action="#" class="w-75 d-flex justify-content-start align-items-start gap-4 flex-wrap p-2 m-2">
+    <div class="cont">
+        <div class="container gap-4">
+            <h2 class="container py-3 my-2">Signup</h2>
+            <form action="#" class="w-75 gap-4p-2 m-2">
                 <div class="input-box mb-3">
                     <label>Enter Name</label>
                     <input class="form-control" type="name" required>
@@ -42,8 +42,8 @@
                             oninput="javascript:if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength) "
                             required>
                     </div> -->
-                <div class="container lower-part d-flex flex-column justify-content-center align-items-center gap-3">
-                    <button type="submit" class="btn btn-primary my-2 fs-5">Signup</button>
+                <div class="container lower-part gap-3">
+                    <button type="submit" class="btn">Signup</button>
                     <div class="signup-link">
                         <a href="{%url 'login' %}">Login</a>
                     </div>

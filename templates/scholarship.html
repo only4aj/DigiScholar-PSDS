@@ -20,7 +20,7 @@
     {% include 'navbar.html' %}
     <hr>
     <div class="container my-4 py-3">
-        <div class="info border border-primary p-3 rounded">
+        <div class="info p-3 ">
             <h2>Overview</h2>
             <p>
                 Launch in the year 2011, PMSSS is a scholarship scheme by the All India Council for Technical Education
@@ -148,7 +148,7 @@
             <br>
             <form method="post" action="{% url 'scholarship_form' %}">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary">Apply</button>
+                <button type="submit" class="btn">Apply</button>
             </form>
         </div>
     </div>
